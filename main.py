@@ -8,7 +8,7 @@ def main():
     print(my_input)
     myTeamsMessage = pymsteams.connectorcard(os.environ["INPUT_TEAMSWEBHOOK"])
     myTeamsMessage.title(str(my_input['release']['name']))
-    myTeamsMessage.text('hello')
+    myTeamsMessage.text(my_input['release']['body'])
     myTeamsMessage.send()
 
 
