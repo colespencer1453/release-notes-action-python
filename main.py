@@ -19,7 +19,7 @@ def main():
 
 
     # Section Text
-    myMessageSection.text(str(my_input['release']['body'])
+    myMessageSection.text(str(my_input['release']['body']))
 
     # Add your section to the connector card object before sending
     myTeamsMessage.addSection(myMessageSection)
