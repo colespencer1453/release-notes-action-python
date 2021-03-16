@@ -7,8 +7,7 @@ def main():
     my_input = json.loads(os.environ["INPUT_RELEASEPAYLOAD"])
     print(my_input)
     myTeamsMessage = pymsteams.connectorcard(os.environ["INPUT_TEAMSWEBHOOK"])
-    myTeamsMessage.title("Release notes for version " + str(my_input['release']['tag_name']) +"of repository: " + str(my_input['repository']['name']))
-    myTeamsMessage.text(my_input['release']['body'])
+    myTeamsMessage.title("Release notes for version " + str(my_input['release']['tag_name']) +" of repository: " + str(my_input['repository']['name']))
     
 
     # create the section
