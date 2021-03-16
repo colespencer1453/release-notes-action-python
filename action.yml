@@ -1,13 +1,12 @@
-name: "Python Container Action Template"
-description: "Get started with Python Container actions"
-author: "Jacob Tomlinson"
+name: "Microsoft Teams Release Notes Forwarder"
+description: "Automates Sending release notes to microsoft teams channels"
+author: "Cole Spencer"
 inputs:
-  myInput:
+  releasePayload:
     description: "Input to use"
     default: "world"
-outputs:
-  myOutput:
-    description: "Output from the action"
+  teamsWebhook:
+    description: "URL from microsoft teams webhook"
 runs:
   using: "docker"
   image: "Dockerfile"
