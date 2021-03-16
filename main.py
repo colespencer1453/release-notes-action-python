@@ -4,7 +4,7 @@ import pymsteams
 import json
 
 def main():
-    my_input = json.loads(os.environ["INPUT_MYINPUT"])
+    my_input = json.loads(os.environ["INPUT_RELEASEPAYLOAD"])
     print(my_input)
     myTeamsMessage = pymsteams.connectorcard(os.environ["INPUT_TEAMSWEBHOOK"])
     myTeamsMessage.title(str(my_input['release']['name']))
